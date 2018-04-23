@@ -24,14 +24,14 @@ $Capacity = $_POST['seatingCapacity'];
 $Transmission_Type = $_POST['transType'];
 
 if($_POST['bluetooth'] == 'yesBluetooth')
-	$Bluetooth = 1;
-else
 	$Bluetooth = 0;
+else
+	$Bluetooth = 1;
 	
 if($_POST['auxCable'] == 'yesAux')
-	$AUX_Cable = 1;
-else
 	$AUX_Cable = 0;
+else
+	$AUX_Cable = 1;
 
 //Don't add a car if capacity is full
 $countQuery = mysql_query("SELECT COUNT(*) AS Count FROM Car WHERE Location_Name = '$Location_Name';");
